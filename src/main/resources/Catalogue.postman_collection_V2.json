@@ -1,0 +1,252 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Catalogue",
+		"_postman_id": "8198342e-2e3a-9221-8736-cf55ab9e3287",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9090/api/catalogue/price/1",
+			"request": {
+				"url": "localhost:9090/api/catalogue/price/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"PriceList is OK\"] = jsonData.priceList === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"BrandId is OK\"] = jsonData.brandId === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Price is OK\"] = jsonData.price === 35.5;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Start Date OK\"] = jsonData.startDate === \"2020-06-14 00:00:00\";",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"End Date OK\"] = jsonData.endDate === \"2020-12-31 23:59:59\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateQuery\": \"2020-06-14 10:00:00\",\n\t\"productId\": 35455,\n\t\"brandId\": 1\n}"
+				},
+				"description": "Caso Test 1"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"PriceList is OK\"] = jsonData.priceList === 2;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"BrandId is OK\"] = jsonData.brandId === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Price is OK\"] = jsonData.price === 25.45;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Start Date OK\"] = jsonData.startDate === \"2020-06-14 15:00:00\";",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"End Date OK\"] = jsonData.endDate === \"2020-06-14 18:30:00\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateQuery\": \"2020-06-14 16:00:00\",\n\t\"productId\": 35455,\n\t\"brandId\": 1\n}"
+				},
+				"description": "Caso Test 2"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"PriceList is OK\"] = jsonData.priceList === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"BrandId is OK\"] = jsonData.brandId === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Price is OK\"] = jsonData.price === 35.5;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Start Date OK\"] = jsonData.startDate === \"2020-06-14 00:00:00\";",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"End Date OK\"] = jsonData.endDate === \"2020-12-31 23:59:59\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateQuery\": \"2020-06-14 21:00:00\",\n\t\"productId\": 35455,\n\t\"brandId\": 1\n}"
+				},
+				"description": "Caso Test3"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"PriceList is OK\"] = jsonData.priceList === 3;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"BrandId is OK\"] = jsonData.brandId === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Price is OK\"] = jsonData.price === 30.5;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Start Date OK\"] = jsonData.startDate === \"2020-06-15 00:00:00\";",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"End Date OK\"] = jsonData.endDate === \"2020-06-15 11:00:00\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateQuery\": \"2020-06-15 10:00:00\",\n\t\"productId\": 35455,\n\t\"brandId\": 1\n}"
+				},
+				"description": "Caso Test4"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"PriceList is OK\"] = jsonData.priceList === 4;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"BrandId is OK\"] = jsonData.brandId === 1;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Price is OK\"] = jsonData.price === 38.95;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Start Date OK\"] = jsonData.startDate === \"2020-06-15 16:00:00\";",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"End Date OK\"] = jsonData.endDate === \"2020-12-31 23:59:59\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:9090/api/catalogue/price/findByBrandProductBetweenDate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateQuery\": \"2020-06-16 21:00:00\",\n\t\"productId\": 35455,\n\t\"brandId\": 1\n}"
+				},
+				"description": "Caso Test5"
+			},
+			"response": []
+		}
+	]
+}
