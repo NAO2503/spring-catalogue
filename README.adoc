@@ -22,7 +22,7 @@ mvn spring-boot:run
 
 == Para probarlo se sugiere la siguiente ruta
 
-ingresar al endpoint desde cualquier cliente Soap UI, ***Postman - (https://github.com/NAO0325/spring-catalogue/blob/main/src/main/resources/Catalogue.postman_collection_V2.json)*** , etc. Para probar conexión usar Get:
+ingresar al endpoint desde cualquier cliente Soap UI, ***Postman - (https://github.com/NAO2503/spring-catalogue/blob/main/src/main/resources/Catalogue.postman_collection_V2.json)*** , etc. Para probar conexión usar Get:
 
 Get - http://localhost:9090/api/catalogue/price/1
 
